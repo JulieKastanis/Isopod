@@ -1,4 +1,4 @@
-Moisture_Content,Time_Spent_Sec
+Moisture_Content_new,Time_Spent_Sec_new
 Low,17
 Low,69
 Low,153
@@ -34,20 +34,3 @@ Med,153
 Med,145
 Med,104
 Med,57
-High,92
-High,34
-High,120
-High,19
-High,287
-High,114
-High,116
-High,57
-High,112
-High,218
-High,146
-High,294
-High,58
-High,62
-High,112
-High,95
-High,71

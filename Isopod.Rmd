@@ -44,10 +44,33 @@ Isopod_data <- read.csv("./isopod.csv")
 View(Isopod_data)
 ```
 
-```{r dataframe}
-df <- data.frame(Moisture_Content, Time_Spent_Sec)
-```
+
+
+
+
+
+
 
 ```{r plot data}
+as.factor(Moisture_Content)
 plot(Time_Spent_Sec ~ Moisture_Content, data=Isopod_data)
+```
+
+```{r anova}
+isopod.aov <- aov(Time_Spent_Sec ~ Moisture_Content, data = Isopod_data)
+```
+
+```{r summary}
+summary(isopod.aov)
+```
+```{r read in data2, include=FALSE}
+Isopod_data2 <- read.csv("./isopod_low_med.csv")
+```
+
+```{r anova2}
+isopod_low_med.aov <- aov(Time_Spent_Sec_new ~ Moisture_Content_new, data = Isopod_data2)
+```
+
+```{r summary2}
+summary(isopod_low_med.aov)
 ```
