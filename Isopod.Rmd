@@ -1,0 +1,53 @@
+---
+title: "Isopod"
+output: html_document
+---
+
+```{r library, include=FALSE}
+library(tidyverse)
+library(knitr) #making tables
+library(leaflet)
+library(tinytex) #may need for knitting pdf versions of .rmd file
+library(ggplot2)
+library(data.table)
+library(lme4)
+library(emmeans)
+library(performance)
+library(ggplot2)
+library(see)
+library(patchwork)
+library(pbkrtest)
+library(ggtext)
+library(asbio)
+library(ggfortify)
+library(bootstrap)
+library(GGally)
+library(MuMIn)
+library(readr)
+library(data.table)
+library(tidyverse)
+library(lmerTest)
+library(emmeans)
+library(ggsn)
+library(mapdata)
+library(maptools)
+library(rgdal)
+```
+
+
+```{r read in data, include=FALSE}
+Isopod_data <- read.csv("./isopod.csv")
+```
+
+
+```{r view data}
+View(Isopod_data)
+```
+
+```{r dataframe}
+df <- data.frame(Moisture_Content, Time_Spent_Sec)
+```
+
+```{r plot data}
+plot(Time_Spent_Sec ~ Moisture_Content, data=Isopod_data)
+```
