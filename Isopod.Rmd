@@ -36,28 +36,23 @@ library(rgdal)
 
 
 ```{r read in data, include=FALSE}
-Isopod_data <- read.csv("./isopod.csv")
+Isopod <- read.csv("./isopod.csv")
 ```
 
 
 ```{r view data}
-View(Isopod_data)
+View(Isopod)
 ```
-
-
-
-
-
 
 
 
 ```{r plot data}
 as.factor(Moisture_Content)
-plot(Time_Spent_Sec ~ Moisture_Content, data=Isopod_data)
+plot(Time_Spent_Sec ~ Moisture_Content, data=Isopod)
 ```
 
 ```{r anova}
-isopod.aov <- aov(Time_Spent_Sec ~ Moisture_Content, data = Isopod_data)
+isopod.aov <- aov(Time_Spent_Sec ~ Moisture_Content, data = Isopod)
 ```
 
 ```{r summary}
